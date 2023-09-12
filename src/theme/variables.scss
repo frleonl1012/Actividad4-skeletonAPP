@@ -234,3 +234,20 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+
+.title-page{
+  font-size: 30px;
+  font-weight:700;
+}
+.centrar-contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.centrar-boton{
+  display: flex;
+  justify-content: center;
+}
