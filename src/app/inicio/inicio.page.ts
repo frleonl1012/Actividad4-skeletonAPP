@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-inicio',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  constructor(private appComponent: AppComponent) { }
+
+  ImagenLogo(): string {
+    return this.appComponent.imgLogo;
+  }
 
   ngOnInit() {
   }
