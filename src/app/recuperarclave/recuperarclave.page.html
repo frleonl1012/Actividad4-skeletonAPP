@@ -18,11 +18,12 @@
       
     <br>
     <div class="centrar-boton">
-      <ion-button [disabled]="!formularioRecuperar.valid" shape="round" color="tertiary" [routerLink]="['/login']" >
+      <ion-button [disabled]="!formularioRecuperar.valid" shape="round" color="tertiary" (click)="mostrarAlerta()">
        
         RECUPERAR
       </ion-button>
     </div>
+    
        
     </ion-card-content>
   </ion-card>
