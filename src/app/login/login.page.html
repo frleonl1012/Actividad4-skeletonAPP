@@ -25,7 +25,7 @@
       
     <br>
     <div class="centrar-boton">
-      <ion-button [disabled]="!formularioLogin.valid" shape="round" color="tertiary" [routerLink]="['/inicio']" >
+      <ion-button [disabled]="!formularioLogin.valid" shape="round" color="tertiary" (click)="guardar()" >
         <ion-icon name="log-in-outline" slot="start"></ion-icon>
         Ingresar
       </ion-button>
