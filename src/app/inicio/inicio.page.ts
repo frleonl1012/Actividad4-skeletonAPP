@@ -11,9 +11,13 @@ import { Router } from '@angular/router';
 
 export class InicioPage implements OnInit {
 
-  message: string = 'Hola';
+  message: string;
+  currentDate: Date;
 
-  constructor(private appComponent: AppComponent, private storage: Storage, private router: Router) {  }
+  constructor(private appComponent: AppComponent, private storage: Storage, private router: Router) { 
+    this.currentDate = new Date();
+    this.message = 'Usuario'
+  }
   
 
   ImagenLogo(): string {
@@ -22,7 +26,7 @@ export class InicioPage implements OnInit {
 
   async ngOnInit() {
     const value = await this.storage.get('login');
-    this.message = `Hola, ${value.usuario}`;
+    this.message = `${value.usuario}`;
   }
 
   async logout(){

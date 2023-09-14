@@ -13,7 +13,24 @@
     
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding"> <h3>{{ message }}</h3></ion-content>
+  <ion-content > 
+    <div class="ion-padding">
+
+      <ion-chip>
+        <ion-avatar>
+          <img alt="Usuario" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-label>{{ message }}</ion-label>
+        
+      </ion-chip>
+      
+      <ion-card  style="text-align:center" class="ion-padding">
+        <h4>Registrar asistencia</h4>
+        <p>{{ currentDate | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
+        <ion-button expand="block" color="tertiary">Escanear QR</ion-button>
+      </ion-card>
+    </div>
+  </ion-content>
 </div>
 
 

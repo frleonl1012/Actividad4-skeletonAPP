@@ -4,6 +4,7 @@ import { AppComponent } from '../app.component';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -38,7 +39,7 @@ export class LoginPage implements OnInit {
       clave: f.clave
     }
     
-    this.storage.set("login",login)
+    await this.storage.set("login",login)
     this.router.navigate(['/inicio']);
   }
 
