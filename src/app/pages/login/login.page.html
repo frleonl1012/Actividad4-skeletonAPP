@@ -1,0 +1,39 @@
+
+
+<ion-content class="ion-padding">
+
+  SKELETON
+
+  <ion-card >
+    <ion-card-header class="centrar-contenido">
+     
+      <ion-card-title class="title-page" color="tertiary">Iniciar sesión</ion-card-title>
+      <ion-card-subtitle>Ingresar credenciales DuocUC</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content >
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-input label="Usuario" formControlName="usuario" labelPlacement="stacked" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Clave" formControlName="clave" type="password"  labelPlacement="stacked" ></ion-input>
+        </ion-item>
+      </form>
+      
+      <br>
+      <div class="centrar-boton">
+        <ion-button [disabled]="!formularioLogin.valid" shape="round" color="tertiary" (click)="guardar()" >
+          <ion-icon name="log-in-outline" slot="start"></ion-icon>
+          Ingresar
+        </ion-button>
+      </div>
+        
+      <hr>
+      <div class="centrar-boton">
+        <ion-button fill="clear" size="small" [routerLink]="['/recuperarclave']" style="font-size: 12px;">He olvidado mi clave</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { AppComponent } from '../app.component';
+import { AppComponent } from '../../app.component';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
 
