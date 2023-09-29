@@ -24,6 +24,11 @@ const routes: Routes = [
     path: 'cambiarclave',
     loadChildren: () => import('./pages/cambiarclave/cambiarclave.module').then( m => m.CambiarclavePageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+
 ];
 
 @NgModule({

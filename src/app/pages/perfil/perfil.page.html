@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button fill="clear" slot="start" color="#f7f7f7">
+      SKELETON
+    </ion-button>
+    <ion-title>Perfil</ion-title>
+    
+    <ion-button fill="clear" [routerLink]="['/inicio']"  slot="end" color="#ffffff">
+      Volver
+    </ion-button>
+  
+  </ion-toolbar>
+  <ion-segment [(ngModel)]="segmentValue" value="all" style="background-color:aliceblue;">
+    <ion-segment-button value="laboral">
+      <ion-label>Exp. Laboral</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="certificaciones">
+      <ion-label>Certificados</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="misdatos">
+      <ion-label>MisDatos</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-card-content>
+ 
+  <ion-card *ngIf="segmentValue === 'laboral'">
+    laboral
+  </ion-card>
+
+  <ion-card *ngIf="segmentValue === 'certificaciones'">
+    certificaciones
+  </ion-card>
+
+  <ion-card *ngIf="segmentValue === 'misdatos'">
+    misdatos
+  </ion-card>
+
+</ion-card-content>
+
