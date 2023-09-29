@@ -8,6 +8,10 @@ import { PerfilPageRoutingModule } from './perfil-routing.module';
 
 import { PerfilPage } from './perfil.page';
 
+import { ExpLaboralComponent } from '../../components/exp-laboral/exp-laboral.component';
+import { CertificadosComponent } from '../../components/certificados/certificados.component';
+import { MisDatosComponent } from '../../components/mis-datos/mis-datos.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +19,6 @@ import { PerfilPage } from './perfil.page';
     IonicModule,
     PerfilPageRoutingModule
   ],
-  declarations: [PerfilPage]
+  declarations: [PerfilPage, ExpLaboralComponent, CertificadosComponent, MisDatosComponent]
 })
 export class PerfilPageModule {}

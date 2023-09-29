@@ -10,32 +10,30 @@
     </ion-button>
   
   </ion-toolbar>
-  <ion-segment [(ngModel)]="segmentValue" value="all" style="background-color:aliceblue;">
-    <ion-segment-button value="laboral">
+
+  <ion-segment [(ngModel)]="segmentValue" style="background-color:aliceblue;">
+    <ion-segment-button value="exp-laboral">
       <ion-label>Exp. Laboral</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="certificaciones">
+    <ion-segment-button value="certificados">
       <ion-label>Certificados</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="misdatos">
-      <ion-label>MisDatos</ion-label>
+    <ion-segment-button value="mis-datos">
+      <ion-label>Mis Datos</ion-label>
     </ion-segment-button>
   </ion-segment>
 </ion-header>
 
 <ion-card-content>
  
-  <ion-card *ngIf="segmentValue === 'laboral'">
-    laboral
-  </ion-card>
+  <!-- Componente para Exp. Laboral -->
+  <app-exp-laboral *ngIf="segmentValue === 'exp-laboral'"></app-exp-laboral>
 
-  <ion-card *ngIf="segmentValue === 'certificaciones'">
-    certificaciones
-  </ion-card>
+  <!-- Componente para Certificados -->
+  <app-certificados *ngIf="segmentValue === 'certificados'"></app-certificados>
 
-  <ion-card *ngIf="segmentValue === 'misdatos'">
-    misdatos
-  </ion-card>
+  <!-- Componente para Mis Datos -->
+  <app-mis-datos *ngIf="segmentValue === 'mis-datos'"></app-mis-datos>
 
 </ion-card-content>
 

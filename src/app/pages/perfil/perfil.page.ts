@@ -9,7 +9,7 @@ import { NgModel } from '@angular/forms';
 })
 export class PerfilPage implements OnInit {
 
-  segmentValue: string = 'laboral';
+  segmentValue: string = 'exp-laboral';
 
   constructor(private appComponent: AppComponent) { }
 
