@@ -1,3 +1,43 @@
-<p>
-  mis-datos works!
-</p>
+<ion-card  >
+  <ion-card-header class="centrar-contenido">
+    <ion-card-subtitle>Información adicional</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <form [formGroup]="formMisDatos" (ngSubmit)="mostrar()">
+      <ion-item>
+        <ion-input label="Nombre" formControlName="nombre" labelPlacement="stacked" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Apellido" formControlName="apellido" labelPlacement="stacked" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Nivel Educación" formControlName="nivelEducacion" label-placement="stacked">
+          <ion-select-option value="basica">Básica</ion-select-option>
+          <ion-select-option value="media">Media</ion-select-option>
+          <ion-select-option value="tecnica">Técnica</ion-select-option>
+          <ion-select-option value="universitaria">Universitaria</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Fecha nacimiento" formControlName="fechaNacimiento" labelPlacement="stacked" type="date" ></ion-input>
+      </ion-item>
+      <br>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="centrar-contenido">
+              <ion-button [disabled]="!formMisDatos.valid" shape="round" color="tertiary" >
+                Mostrar
+              </ion-button>
+          </ion-col>
+          <ion-col class="centrar-contenido">
+            <ion-button shape="round" color="medium" (click)="limpiarCampos()" >
+              Limpiar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+    
+    
+  </ion-card-content>
+</ion-card>

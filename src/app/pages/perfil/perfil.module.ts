@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { PerfilPageRoutingModule } from './perfil-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { PerfilPage } from './perfil.page';
 
@@ -17,7 +18,8 @@ import { MisDatosComponent } from '../../components/mis-datos/mis-datos.componen
     CommonModule,
     FormsModule,
     IonicModule,
-    PerfilPageRoutingModule
+    PerfilPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [PerfilPage, ExpLaboralComponent, CertificadosComponent, MisDatosComponent]
 })
